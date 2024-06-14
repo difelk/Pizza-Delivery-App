@@ -1,8 +1,10 @@
-package com.company.dipizza;
+package com.company.dipizza.view.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.company.dipizza.R;
 
 public class MainActivity extends AppCompatActivity {
 
