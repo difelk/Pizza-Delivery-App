@@ -7,31 +7,37 @@ import android.widget.EditText;
 
 import com.company.dipizza.R;
 
-import javax.xml.validation.Validator;
-
 public class EditTextValidations implements TextWatcher {
     private Activity activity;
     private EditText editText;
+    private TextWatcher externalTextWatcher;
 
-    public EditTextValidations(Activity activity, EditText editText) {
+    public EditTextValidations(Activity activity, EditText editText, TextWatcher externalTextWatcher) {
         this.activity = activity;
         this.editText = editText;
+        this.externalTextWatcher = externalTextWatcher;
     }
 
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        // No action needed
+        if (externalTextWatcher != null) {
+            externalTextWatcher.beforeTextChanged(s, start, count, after);
+        }
     }
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-        // No action needed
+        if (externalTextWatcher != null) {
+            externalTextWatcher.onTextChanged(s, start, before, count);
+        }
     }
 
     @Override
     public void afterTextChanged(Editable s) {
-        // Now you know which EditText has changed
         validate(s.toString(), editText);
+        if (externalTextWatcher != null) {
+            externalTextWatcher.afterTextChanged(s);
+        }
     }
 
     private void validate(String text, EditText editText) {
@@ -79,6 +85,4 @@ public class EditTextValidations implements TextWatcher {
             }
         }
     }
-
-
 }
