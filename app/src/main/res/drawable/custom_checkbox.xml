@@ -1,0 +1,19 @@
+<!-- custom_checkbox.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/checkboxFill" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/checkboxBorder" />
+        </shape>
+    </item>
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/checkboxBorder" />
+        </shape>
+    </item>
+</selector>

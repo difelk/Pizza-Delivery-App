@@ -9,7 +9,8 @@
     android:orientation="horizontal"
     tools:ignore="MissingConstraints">
 
-<!--input field-->
+        <!--input field-->
+
 <!--    <EditText-->
 <!--        android:id="@+id/inputField"-->
 <!--        android:style="@style/CommonEditTextStyle"-->
@@ -17,7 +18,10 @@
 <!--        android:layout_height="60dp"-->
 <!--        android:hint="Full Name"-->
 <!--        />-->
-    <!--input field error-->
+
+
+        <!--    input field error-->
+
 <!--    <TextView-->
 <!--        android:id="@+id/inputFieldErrorMsg"-->
 <!--        android:layout_width="wrap_content"-->
@@ -25,6 +29,32 @@
 <!--        style="@style/CommonErrorTextViewStyle"-->
 <!--        android:text=""-->
 <!--        />-->
+
+
+<!--        check box-->
+
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/myCheckBox"-->
+<!--                    android:layout_width="16dp"-->
+<!--                    android:layout_height="16dp"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:button="@drawable/custom_checkbox"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:background="@drawable/custom_checkbox" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_toEndOf="@id/myCheckBox"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:text="By creating an account you agree to our Terms of Service and Privacy Policy" />-->
+
+<!--        </RelativeLayout>-->
 
 
 </LinearLayout>

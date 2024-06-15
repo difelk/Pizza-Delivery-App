@@ -7,4 +7,9 @@
     <color name="inputBackground">#F5F6FB</color>
     <color name="label">#6D6E76</color>
     <color name="errorText">#FF5443</color>
+    <color name="checkboxBorder">#F0F0F0</color>
+    <color name="checkboxFill">#FE6851</color>
+    <color name="buttonTopColor">#FF9800</color>
+    <color name="buttonBottomColor">#FFC107</color>
+
 </resources>

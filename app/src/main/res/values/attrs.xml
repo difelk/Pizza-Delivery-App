@@ -3,4 +3,7 @@
     <declare-styleable name="AppTheme">
         <attr name="errorTextViewStyle" format="reference" />
     </declare-styleable>
+    <declare-styleable name="AppTheme2">
+        <attr name="CommonButtonStyle" format="reference" />
+    </declare-styleable>
 </resources>
