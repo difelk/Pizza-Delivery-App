@@ -16,19 +16,19 @@
         <item name="android:padding">18dp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textColorHint">@color/label</item>
-        <item name="android:layout_marginTop">8dp</item>
-        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
     </style>
 
     <!-- Error Text style -->
     <style name="CommonErrorTextViewStyle" parent="Widget.AppCompat.TextView">
         <item name="android:textColor">@color/errorText</item>
-        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
     </style>
 
 <!--   submit button styles -->
 
-    <style name="CommonButtonStyle" parent="Widget.AppCompat.Button">
+    <style name="CommonButtonStyle" parent ="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/custom_button_background</item>
         <item name="android:textColor">@android:color/white</item>
@@ -45,4 +45,9 @@
     </style>
 
 
+        <style name="TransparentButtonStyle" parent="Widget.AppCompat.Button">
+            <item name="android:background">@drawable/custom_transparent_button</item>
+            <item name="android:textColor">#FFFFFF</item> <!-- Change this to the desired text color -->
+            <item name="android:padding">10dp</item> <!-- Add padding if needed -->
+        </style>
 </resources>
