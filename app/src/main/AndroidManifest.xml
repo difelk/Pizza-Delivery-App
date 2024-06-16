@@ -23,7 +23,11 @@
         </activity>
         <!--welcome ui-->
         <activity
-            android:name=".view.ui.welcome.Welcome"
+            android:name=".view.ui.welcome.WelcomeView"
+            android:exported="true" />
+        <!--category ui-->
+        <activity
+            android:name=".view.ui.home.CategoryView"
             android:exported="true" />
         <!--registration form-->
         <activity
