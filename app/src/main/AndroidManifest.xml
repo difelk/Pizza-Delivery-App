@@ -29,6 +29,10 @@
         <activity
             android:name=".view.ui.home.CategoryView"
             android:exported="true" />
+        <!--menu ui-->
+        <activity
+            android:name=".view.ui.home.MenuView"
+            android:exported="true" />
         <!--registration form-->
         <activity
             android:name=".view.ui.registration.RegistrationView"
