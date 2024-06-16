@@ -1,5 +1,6 @@
 package com.company.dipizza.view.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -71,6 +72,10 @@ public class CategoryView extends AppCompatActivity {
             buttonLayout.setOnClickListener(v -> {
                 Log.d("CategoryView", "Category clicked: ID=" + category.getId() +
                         ", Name=" + category.getCategoryName());
+                Intent directToMenu = new Intent(this, MenuView.class);
+                directToMenu.putExtra("category", category.getCategoryName());
+                directToMenu.putExtra("categoryID", category.getId());
+                startActivity(directToMenu);
             });
 
             ImageView imageView = new ImageView(this);
@@ -91,6 +96,7 @@ public class CategoryView extends AppCompatActivity {
             textParams.setMargins(0, 12, 0, 0);
             textView.setLayoutParams(textParams);
             textView.setPadding(8, 8, 8, 8);
+            textView.setTextSize(16);
             textView.setText(category.getCategoryName());
 
             buttonLayout.addView(imageView);
