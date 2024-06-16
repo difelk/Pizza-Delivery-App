@@ -21,7 +21,7 @@ public class MenuView extends AppCompatActivity {
         setContentView(R.layout.layout_menu);
         try {
             Intent menuIntent = getIntent();
-            categoryID = Integer.parseInt(menuIntent.getStringExtra("categoryID"));
+            categoryID = menuIntent.getIntExtra("categoryID", -1);
             categoryName = menuIntent.getStringExtra("category");
 
             headerTitle = findViewById(R.id.menuTitle);
