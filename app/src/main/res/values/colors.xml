@@ -12,5 +12,6 @@
     <color name="checkboxFill">#FE6851</color>
     <color name="buttonTopColor">#FF9800</color>
     <color name="buttonBottomColor">#FFC107</color>
+    <color name="welcomeBackground">#FECD4C</color>
 
 </resources>

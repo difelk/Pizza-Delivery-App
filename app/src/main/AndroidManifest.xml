@@ -21,7 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<!--registration form-->
+        <!--welcome ui-->
+        <activity
+            android:name=".view.ui.welcome.WelcomeView"
+            android:exported="true" />
+        <!--category ui-->
+        <activity
+            android:name=".view.ui.home.CategoryView"
+            android:exported="true" />
+        <!--registration form-->
         <activity
             android:name=".view.ui.registration.RegistrationView"
             android:exported="true" />
