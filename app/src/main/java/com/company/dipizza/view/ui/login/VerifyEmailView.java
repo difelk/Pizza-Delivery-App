@@ -12,18 +12,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.company.dipizza.R;
 
-public class ForgotPasswordView extends AppCompatActivity {
+public class VerifyEmailView extends AppCompatActivity {
 
-    EditText emailInput;
-    Button verifyEmaildButton;
+    EditText emailVerifyCodeInput;
+    Button verifyEmailCodeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_forgot_password);
+        setContentView(R.layout.layout_verify_email_code);
 
-        emailInput = findViewById(R.id.email);
-        verifyEmaildButton = findViewById(R.id.verifyEmailButton);
+        emailVerifyCodeInput = findViewById(R.id.emailVerification);
+        verifyEmailCodeButton = findViewById(R.id.verifyEmailCodeButton);
 
         TextWatcher validationWatcher = new TextWatcher() {
             @Override
@@ -40,27 +40,27 @@ public class ForgotPasswordView extends AppCompatActivity {
             }
         };
 
-        emailInput.addTextChangedListener(validationWatcher);
+        emailVerifyCodeInput.addTextChangedListener(validationWatcher);
 
         checkFieldsForValidation();
     }
 
-    public void handleVerifyEmail(View view) {
-        String email = emailInput.getText().toString().trim();
+    public void handleVerifyEmailByCode(View view) {
+        String emailCode = emailVerifyCodeInput.getText().toString().trim();
 
-        if (email.isEmpty()) {
-            emailInput.setError("Email is required");
+        if (emailCode.isEmpty()) {
+            emailVerifyCodeInput.setError("Verification Code is required");
         }
 
-        if (!email.isEmpty()){
-            Intent intent = new Intent(ForgotPasswordView.this, VerifyEmailView.class);
+        if (!emailCode.isEmpty()){
+            Intent intent = new Intent(VerifyEmailView.this, ResetPasswordView.class);
             startActivity(intent);
         }
 
     }
 
     private void checkFieldsForValidation() {
-        boolean isEmailValid = !emailInput.getText().toString().isEmpty();
-        verifyEmaildButton.setEnabled(isEmailValid);
+        boolean isEmailCodeValid = !emailVerifyCodeInput.getText().toString().isEmpty();
+        verifyEmailCodeButton.setEnabled(isEmailCodeValid);
     }
 }

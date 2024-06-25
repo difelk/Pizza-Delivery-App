@@ -1,9 +1,11 @@
 package com.company.dipizza.view.ui.registration;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -12,6 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.company.dipizza.R;
 import com.company.dipizza.utliz.EditTextValidations;
+import com.company.dipizza.view.ui.login.ForgotPasswordView;
+import com.company.dipizza.view.ui.login.LoginView;
+import com.company.dipizza.view.ui.login.ResetPasswordView;
 
 public class RegistrationView extends AppCompatActivity {
 
@@ -83,5 +88,10 @@ public class RegistrationView extends AppCompatActivity {
         }
 
 
+    }
+
+    public void handleLogIn(View view) {
+        Intent intent = new Intent(RegistrationView.this, LoginView.class);
+        startActivity(intent);
     }
 }
