@@ -37,6 +37,22 @@
         <activity
             android:name=".view.ui.registration.RegistrationView"
             android:exported="true" />
+        <!--Login form-->
+        <activity
+            android:name=".view.ui.login.LoginView"
+            android:exported="true" />
+        <!--Forgot Password form-->
+        <activity
+            android:name=".view.ui.login.ForgotPasswordView"
+            android:exported="true" />
+        <!--Verify Email form-->
+        <activity
+            android:name=".view.ui.login.VerifyEmailView"
+            android:exported="true" />
+        <!--Reset Password form-->
+        <activity
+            android:name=".view.ui.login.ResetPasswordView"
+            android:exported="true" />
     </application>
 
 </manifest>
