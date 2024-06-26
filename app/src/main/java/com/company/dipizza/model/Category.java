@@ -11,10 +11,13 @@ public class Category {
 
     private String categoryType;
 
-    public Category(int id, String name, int icon) {
+    private String price;
+
+    public Category(int id, String name, int icon, String price) {
         this.id = id;
         this.categoryName = name;
         this.categoryIcon = icon;
+        this.price = price;
     }
 
     public int getCategoryIcon() {
@@ -66,6 +69,9 @@ public class Category {
         this.updatedDate = updatedDate;
     }
 
+    public String getPrice() {
+        return price;
+    }
     private Date createdDate;
 
     private Date updatedDate;
