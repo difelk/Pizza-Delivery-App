@@ -72,10 +72,10 @@ public class CategoryView extends AppCompatActivity {
             buttonLayout.setOnClickListener(v -> {
                 Log.d("CategoryView", "Category clicked: ID=" + category.getId() +
                         ", Name=" + category.getCategoryName());
-                Intent directToMenu = new Intent(this, MenuView.class);
-                directToMenu.putExtra("category", category.getCategoryName());
-                directToMenu.putExtra("categoryID", category.getId());
-                startActivity(directToMenu);
+                Intent directToCategoryDetails = new Intent(this, CategoryDetailsView.class);
+                directToCategoryDetails.putExtra("category", category.getCategoryName());
+                directToCategoryDetails.putExtra("categoryID", category.getId());
+                startActivity(directToCategoryDetails);
             });
 
             ImageView imageView = new ImageView(this);
@@ -105,7 +105,6 @@ public class CategoryView extends AppCompatActivity {
             rowLayout.addView(buttonLayout);
         }
     }
-
 
 
 
