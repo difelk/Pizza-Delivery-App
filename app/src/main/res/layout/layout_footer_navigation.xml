@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_horizontal"
-        android:background="@color/white"
+        android:background="@color/footerMenuBackground"
         >
         <Button
             android:id="@+id/directToHome"
