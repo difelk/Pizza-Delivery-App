@@ -2,10 +2,10 @@ package com.company.dipizza.view.ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.graphics.Color;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -37,16 +37,10 @@ public class CategoryView extends AppCompatActivity {
     public void displayCategories() {
         List<Category> categories = new ArrayList<>();
 
-        categories.add(new Category(1, "Category 1", R.drawable.pizza_img, "$10"));
-        categories.add(new Category(2, "Category 2", R.drawable.pizza_img, "$15"));
-        categories.add(new Category(3, "Category 3", R.drawable.pizza_img, "$20"));
-        categories.add(new Category(4, "Category 4", R.drawable.pizza_img, "$25"));
-        categories.add(new Category(5, "Category 3", R.drawable.pizza_img, "$20"));
-        categories.add(new Category(6, "Category 4", R.drawable.pizza_img, "$25"));
-        categories.add(new Category(7, "Category 3", R.drawable.pizza_img, "$20"));
-        categories.add(new Category(8, "Category 4", R.drawable.pizza_img, "$25"));
-        categories.add(new Category(9, "Category 3", R.drawable.pizza_img, "$20"));
-        categories.add(new Category(10, "Category 4", R.drawable.pizza_img, "$25"));
+        categories.add(new Category(1, "Category 1", R.drawable.pizza_img));
+        categories.add(new Category(2, "Category 2", R.drawable.pizza_img));
+        categories.add(new Category(3, "Category 3", R.drawable.pizza_img));
+        categories.add(new Category(4, "Category 4", R.drawable.pizza_img));
 
         LinearLayout categoryLayout = findViewById(R.id.categoryLayout);
 
@@ -71,17 +65,17 @@ public class CategoryView extends AppCompatActivity {
 
             FrameLayout buttonLayout = new FrameLayout(this);
             buttonLayout.setLayoutParams(buttonParams);
-            buttonLayout.setBackground(ContextCompat.getDrawable(this, R.drawable.rounded_corner));
+            buttonLayout.setBackgroundColor(ContextCompat.getColor(this, android.R.color.white));
             buttonLayout.setPadding(8, 8, 8, 8);
 
             final Category category = categories.get(i);
             buttonLayout.setOnClickListener(v -> {
                 Log.d("CategoryView", "Category clicked: ID=" + category.getId() +
                         ", Name=" + category.getCategoryName());
-                Intent directToMenu = new Intent(this, MenuView.class);
-                directToMenu.putExtra("category", category.getCategoryName());
-                directToMenu.putExtra("categoryID", category.getId());
-                startActivity(directToMenu);
+                Intent directToCategoryDetails = new Intent(this, CategoryDetailsView.class);
+                directToCategoryDetails.putExtra("category", category.getCategoryName());
+                directToCategoryDetails.putExtra("categoryID", category.getId());
+                startActivity(directToCategoryDetails);
             });
 
             ImageView imageView = new ImageView(this);
@@ -104,28 +98,14 @@ public class CategoryView extends AppCompatActivity {
             textView.setPadding(8, 8, 8, 8);
             textView.setTextSize(16);
             textView.setText(category.getCategoryName());
-            textView.setGravity(Gravity.CENTER);
-            textView.setTypeface(null, android.graphics.Typeface.BOLD);
-
-            TextView priceView = new TextView(this);
-            FrameLayout.LayoutParams priceParams = new FrameLayout.LayoutParams(
-                    ViewGroup.LayoutParams.WRAP_CONTENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT
-            );
-            priceParams.gravity = Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM;
-            priceParams.setMargins(0, 32, 0, 0);
-            priceView.setLayoutParams(priceParams);
-            priceView.setPadding(8, 8, 8, 8);
-            priceView.setTextSize(16);
-            priceView.setText(category.getPrice());
-            priceView.setGravity(Gravity.CENTER);
-            priceView.setTextColor(Color.YELLOW);
 
             buttonLayout.addView(imageView);
             buttonLayout.addView(textView);
-            buttonLayout.addView(priceView);
 
             rowLayout.addView(buttonLayout);
         }
     }
+
+
+
 }

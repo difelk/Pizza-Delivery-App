@@ -29,6 +29,10 @@
         <activity
             android:name=".view.ui.home.CategoryView"
             android:exported="true" />
+        <!--category details ui-->
+        <activity
+            android:name=".view.ui.home.CategoryDetailsView"
+            android:exported="true" />
         <!--menu ui-->
         <activity
             android:name=".view.ui.home.MenuView"
