@@ -13,5 +13,7 @@
     <color name="buttonTopColor">#FF9800</color>
     <color name="buttonBottomColor">#FFC107</color>
     <color name="welcomeBackground">#FECD4C</color>
+    <color name="background2">#DF3030</color>
+    <color name="footerMenuBackground">#E55858</color>
 
 </resources>

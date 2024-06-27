@@ -37,6 +37,15 @@
         <activity
             android:name=".view.ui.home.MenuView"
             android:exported="true" />
+
+        <!--menu item ui-->
+        <activity
+            android:name=".view.ui.home.ItemView"
+            android:exported="true" />
+        <!--cart ui-->
+        <activity
+            android:name=".view.ui.profile.CartView"
+            android:exported="true" />
         <!--registration form-->
         <activity
             android:name=".view.ui.registration.RegistrationView"
