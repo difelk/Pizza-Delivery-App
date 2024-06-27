@@ -46,6 +46,10 @@
         <activity
             android:name=".view.ui.profile.CartView"
             android:exported="true" />
+        <!--Settings UI-->
+        <activity
+            android:name=".view.ui.profile.SettingsView"
+            android:exported="true" />
         <!--registration form-->
         <activity
             android:name=".view.ui.registration.RegistrationView"
@@ -65,6 +69,10 @@
         <!--Reset Password form-->
         <activity
             android:name=".view.ui.login.ResetPasswordView"
+            android:exported="true" />
+        <!--Footer View-->
+        <activity
+            android:name=".view.ui.common.FooterNavigationView"
             android:exported="true" />
     </application>
 
