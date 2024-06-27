@@ -1,12 +1,13 @@
 package com.company.dipizza.view.ui.profile;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.company.dipizza.R;
 
-public class OrderView extends AppCompatActivity {
+public class CartView  extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,4 +19,7 @@ public class OrderView extends AppCompatActivity {
 
 
     }
+
+
+
 }
