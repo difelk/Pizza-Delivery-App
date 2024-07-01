@@ -2,6 +2,7 @@ package com.company.dipizza.view.ui.welcome;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -22,6 +23,7 @@ public class WelcomeView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_welcome);
 
+        Log.d("welcome view", "Welcome");
         directSignInButton = findViewById(R.id.loginBtn);
         directSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override

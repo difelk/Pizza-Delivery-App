@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.company.dipizza.R;
+import com.company.dipizza.view.ui.profile.SettingsView;
+import com.company.dipizza.view.ui.registration.RegistrationView;
 import com.company.dipizza.view.ui.welcome.WelcomeView;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,10 +15,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.layout_welcome);
 
         Intent welcome = new Intent(this, WelcomeView.class);
 //        Intent reg = new Intent(this, RegistrationView.class);
+//        Intent settings = new Intent(this, SettingsView.class);
         startActivity(welcome);
 
     }

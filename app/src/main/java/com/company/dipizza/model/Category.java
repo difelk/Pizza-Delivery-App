@@ -19,6 +19,11 @@ public class Category {
         this.categoryIcon = icon;
         this.price = price;
     }
+    public Category(int id, String name, int icon) {
+        this.id = id;
+        this.categoryName = name;
+        this.categoryIcon = icon;
+    }
 
     public int getCategoryIcon() {
         return categoryIcon;
