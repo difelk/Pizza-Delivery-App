@@ -1,46 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/commonLayout"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/mainBackgroundColor"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_horizontal"
-        android:background="@color/footerMenuBackground"
-        android:padding="12dp">
+        android:background="@color/footerMenuBackground">
 
-        <ImageView
+        <Button
             android:id="@+id/directToHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="40dp"
-            android:background="@drawable/home_rounded_button"
-            android:clickable="true"
-            android:focusable="true"/>
+            android:layout_marginHorizontal="12dp"
+            android:background="@drawable/home_rounded_button"/>
 
-        <ImageView
+        <Button
             android:id="@+id/directToCart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="40dp"
-            android:background="@drawable/cart_rounded_button"
-            android:clickable="true"
-            android:focusable="true"
-             />
+            android:layout_marginHorizontal="12dp"
+            android:background="@drawable/cart_rounded_button"/>
 
-        <ImageView
+        <Button
             android:id="@+id/directToProfile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="40dp"
-            android:background="@drawable/account_rounded_button"
-            android:clickable="true"
-            android:focusable="true"
-           />
+            android:layout_marginHorizontal="12dp"
+            android:background="@drawable/account_rounded_button"/>
     </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

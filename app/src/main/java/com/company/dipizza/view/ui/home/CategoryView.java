@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -17,6 +18,10 @@ import androidx.core.content.ContextCompat;
 
 import com.company.dipizza.R;
 import com.company.dipizza.model.Category;
+import com.company.dipizza.view.ui.common.FooterUtils;
+import com.company.dipizza.view.ui.profile.CartView;
+import com.company.dipizza.view.ui.registration.RegistrationView;
+import com.company.dipizza.view.ui.welcome.WelcomeView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,15 +37,16 @@ public class CategoryView extends AppCompatActivity {
 
         scrollViewLayout = findViewById(R.id.categoryScrollWrap);
         displayCategories();
+        FooterUtils.setupFooterButtons(this, findViewById(R.id.bottom_navigation));
     }
 
     public void displayCategories() {
         List<Category> categories = new ArrayList<>();
 
-        categories.add(new Category(1, "Category 1", R.drawable.pizza_img));
-        categories.add(new Category(2, "Category 2", R.drawable.pizza_img));
-        categories.add(new Category(3, "Category 3", R.drawable.pizza_img));
-        categories.add(new Category(4, "Category 4", R.drawable.pizza_img));
+        categories.add(new Category(1, "Category 1", R.drawable.pizza_img, "120"));
+        categories.add(new Category(2, "Category 2", R.drawable.pizza_img, "120"));
+        categories.add(new Category(3, "Category 3", R.drawable.pizza_img, "120"));
+        categories.add(new Category(4, "Category 4", R.drawable.pizza_img, "120"));
 
         LinearLayout categoryLayout = findViewById(R.id.categoryLayout);
 
